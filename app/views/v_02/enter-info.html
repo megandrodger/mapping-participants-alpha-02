@@ -1,0 +1,136 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  GOV.UK prototype kit
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+  <div class="phase-banner">
+  <p>
+    <strong class="phase-tag">ALPHA</strong>
+    <span>This is a new service – your <a href="#">feedback</a> will help us to improve it.</span>
+  </p>
+</div>
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <h1 class="heading-large">
+        Add a research participant for <span style="color: #005DA6;"> Right to work</span>
+      </h1>
+
+
+      <form action="index-added" method="get" class="form" id="access_needs_form" name="access_needs_form">
+
+
+</br>
+
+<fieldset class="form-group">
+  <label class="form-label-bold">
+    Date of research session
+    <span class="form-hint">This is not a required field and can be a partial or full date.</span>
+  </label>
+  <legend class="visuallyhidden">Date of research session</legend>
+  <div class="form-date">
+    <div class="form-group form-group-day">
+      <label for="dob-day">Day</label>
+      <input class="form-control" id="dob-day" name="dob-day" type="number" pattern="[0-9]*" min="0" max="31">
+    </div>
+
+    <div class="form-group form-group-month">
+      <label for="dob-month">Month</label>
+      <input class="form-control" id="dob-month" name="dob-month" type="number" pattern="[0-9]*" min="0" max="12">
+    </div>
+
+    <div class="form-group form-group-year">
+      <label for="dob-year">Year</label>
+      <input class="form-control" id="dob-year" name="dob-year" type="number" pattern="[0-9]*" min="0" max="2014">
+    </div>
+
+  </div>
+</fieldset>
+
+</br>
+          <div class="form group">
+          <label class="form-label-bold" for="project-name">
+            Participant ID
+            <span class="form-hint">Any identifier that is useful to you. Only people with permission to view this project will see this</span>
+            </label>
+
+            <input class="form-control" id="project-name" type="text" name="project-name"></input>
+          </div>
+
+</br>
+
+          <div class="form-group">
+  <label class="form-label-bold" for="category">Digital inclusion category</label>
+  <select class="form-control" id="category" name="select-box">
+    <option>1. Never have, never will</option>
+    <option>2. Was online, but no longer</option>
+    <option>3. Willing but unable</option>
+    <option>4. Reluctantly online</option>
+    <option>5. Learning the ropes</option>
+    <option>6. Task specific</option>
+    <option>7. Basic skills</option>
+    <option>8. Confident</option>
+    <option>9. Expert</option>
+  </select>
+</div>
+
+
+</br>
+</br>
+<!--
+<div class="form-group inline">
+  <label class="form-label-bold" for="access-needs">Does your participant have any access needs?</label>
+  <fieldset>
+
+    <div class="multiple-choice">
+      <input id="acess-needs-yes" type="radio" name="access_needs" value="Yes" onclick="javascript:changeAction('Yes');">
+      <label for="access-needs-yes">Yes</label>
+    </div>
+
+    <div class="multiple-choice">
+      <input id="acess-needs-no" type="radio" name="access_needs" value="No" onclick="javascript:changeAction('No');">
+      <label for="access-needs-no">No</label>
+    </div>
+
+  </div>
+!-->
+
+        <div class="form-group">
+          <input class="button" type="submit" value="Submit">
+        </div>
+
+      </form>
+
+
+
+
+    </div>
+  </div>
+</main>
+
+<!--
+<script type="text/javascript">
+
+
+  function changeAction(ans){
+
+      if( ans=='save-participant' ) {
+        document.getElementById('action_now_form').action = 'enter-info';
+      }
+      if( ans=='view-data' ) {
+        document.getElementById('action_now_form').action = 'dashboard';
+      }
+      if( ans=='guidance' ) {
+        document.getElementById('action_now_form').action = 'guidance-page';
+      }
+}
+!-->
+
+
+</script>
+
+{% endblock %}
