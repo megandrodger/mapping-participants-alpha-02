@@ -1,0 +1,106 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  GOV.UK prototype kit
+{% endblock %}
+
+{% block content %}
+
+
+
+<main id="content" role="main">
+
+<style type="text/css">
+
+.category {
+  float: left;
+  margin-right: 20px;
+  font-size: 18px;
+  min-width: 80px;
+  min-height: 94px;
+  margin-bottom: 20px;
+}
+
+.activities {
+  margin-left: 30px;
+}
+
+.activities h3 {
+  margin-bottom: 5px;
+  margin-top: 5px;
+}
+</style>
+<div class="phase-banner">
+  <p>
+    <strong class="phase-tag">ALPHA</strong>
+    <span>This is a new service – your <a href="#">feedback</a> will help us to improve it.</span>
+  </p>
+</div>
+
+<p style="text-align:left;margin:0;">
+      <span style="left:0px; top:15px;position:relative;font-size:16px;"><a href="index" class="link-back">Back</a></span>
+  </p>
+
+
+<h3 class="heading-medium">
+  Digital inclusion scale
+</h3>
+</div>
+</div>
+
+<style type="text/css">
+.hidden {display:none}
+</style>
+
+<body onload="document.getElementById ('never-have').className = 'hidden'"; >
+
+
+<div class="grid-row">
+  <div class="column-full">
+
+<div class="inclusion-scale">
+
+<div class="category" style="border-bottom: solid #F83908 6px;"><p>1</br>Never have,</br> never will</br><a  onclick="document.getElementById ('never-have').className = document.getElementById ('never-have').className == 'hidden' ? '' : 'hidden'" href=#>more</a></p></div>
+<div class="category" style="border-bottom: solid #E76D42 6px;"><p>2</br>Was online</br> but no longer</br><a  onclick="document.getElementById ('was-online').className = document.getElementById ('was-online').className == 'hidden' ? '' : 'hidden'" href=#>more</a></p></div>
+<div class="category" style="border-bottom: solid #F57330 6px;"><p>3</br>Willing </br>but unable</br><a  onclick="document.getElementById ('willing').className = document.getElementById ('willing').className == 'hidden' ? '' : 'hidden'" href=#>more</a></p></div>
+<div class="category" style="border-bottom: solid #F4C436 6px;"><p>4</br>Reluctantly </br>online</br><a  onclick="document.getElementById ('reluctantly').className = document.getElementById ('reluctantly').className == 'hidden' ? '' : 'hidden'" href=#>more</a></p></div>
+<div class="category" style="border-bottom: solid #F5E940 6px;"><p>5</br>Learning </br>the ropes</br><a  onclick="document.getElementById ('learning').className = document.getElementById ('learning').className == 'hidden' ? '' : 'hidden'" href=#>more</a></p></div>
+<div class="category" style="border-bottom: solid #D9D92E 6px;"><p>6</br>Task </br>specific</br><a  onclick="document.getElementById ('task-specific').className = document.getElementById ('task-specific').className == 'hidden' ? '' : 'hidden'" href=#>more</a></p></div>
+<div class="category" style="border-bottom: solid #D0D92E 6px;"><p>7</br></br>Basic skills</br><a  onclick="document.getElementById ('basic').className = document.getElementById ('basic').className == 'hidden' ? '' : 'hidden'" href=#>more</a></p></div>
+<div class="category" style="border-bottom: solid #B2DF4B 6px;"><p>8</br></br>Confident</br><a  onclick="document.getElementById ('confident').className = document.getElementById ('confident').className == 'hidden' ? '' : 'hidden'" href=#>more</a></p></div>
+<div class="category" style="border-bottom: solid #72C644 6px;"><p>9</br></br>Expert</br><a  onclick="document.getElementById ('expert').className = document.getElementById ('expert').className == 'hidden' ? '' : 'hidden'" href=#>more</a></p></div>
+
+
+</div>
+</div>
+</div>
+
+
+
+
+<p id="never-have"><span style="font-weight: bold; ">Never have, never will</span></br>The participant has never used the internet and has no desire to.</br> They may feel that learning how to use the internet does not fit into their lives</p>
+<!--<p id="was-online">Please don't appear</p>
+<p id="willing">This is different stuff</p>
+<p id="reluctantly">This is different stuff</p>
+<p id="learning">This is different stuff</p>
+<p id="task-specific">This is different stuff</p>
+<p id="basic">This is different stuff</p>
+<p id="confident">This is different stuff</p>
+<p id="expert">This is different stuff</p>!-->
+
+</br>
+</br>
+<div class="grid-row">
+  <a href="#top">Back to top</a>
+</div>
+
+
+
+
+
+
+  </div>
+</main>
+
+
+{% endblock %}

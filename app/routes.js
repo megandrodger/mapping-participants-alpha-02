@@ -23,4 +23,6 @@ router.get('/v_02/guidance-page', function (req, res) {
   res.render('v_02/guidance-page')
 })
 
+
+
 module.exports = router

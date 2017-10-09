@@ -1,0 +1,119 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  GOV.UK prototype kit
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+<style type="text/css">
+
+
+  .category {
+    text-align: center;
+  }
+  .category p {
+    font-size: 21px;
+  }
+
+  .prompts {
+    text-align: center;
+    background-color: #eaf6f5;
+    padding-top: 1px;
+    padding-bottom: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  .prompts p {
+    font-size: 21px;
+  }
+
+  .page-divide {
+    background-color: #005DA6;
+    max-height: 1.1rem;
+  }
+
+
+</style>
+<div class="phase-banner">
+  <p>
+    <strong class="phase-tag">ALPHA</strong>
+    <span>This is a new service – your <a href="#">feedback</a> will help us to improve it.</span>
+  </p>
+</div>
+
+<div class="panel panel-border-wide alert-success" style="border-color: #28A197;background-color: #eaf6f5; margin-bottom:0px; margin-top:30px;margin-left:0px;margin-right:0px;">
+  <p>Participant added to Right to work</p>
+</div>
+
+<div class="grid-row">
+  <div class="column-two-thirds">
+
+    <form action="guidance-page" method="get" class="form" id="action_now_form" name="action_now_form">
+
+      <h1 class="heading-xlarge">
+        Digital inclusion data for <span style="color: #005DA6;">Right to work</span>
+      </h1>
+
+    <p>This is a support tool for researchers to understand and log the digital inclusion categories of your research participants.</p>
+
+<h2 class="heading-medium">What would you like to do?</h2>
+<div class="form-group">
+<fieldset>
+
+  <div class="multiple-choice">
+    <input id="guidance" type="radio" name="action_now" value="guidance" onclick="javascript:changeAction('guidance');">
+    <label for="guidance">View guidance material to help decide the digital inclusion category of your participant</label>
+  </div>
+
+  <div class="multiple-choice">
+    <input id="save-participant" type="radio" name="action_now" value="save-participant" onclick="javascript:changeAction('save-participant');">
+    <label for="save-participant">Save a research participants' digital inclusion data</label>
+  </div>
+
+  <div class="multiple-choice">
+    <input id="view-data" type="radio" name="action_now" value="view-data" onclick="javascript:changeAction('view-data');">
+    <label for="view-data">View a project's digital inclusion data</label>
+  </div>
+
+
+</fieldset>
+</div>
+
+
+<div class="form-group">
+</br>
+<input type="submit" class="button" value="Continue">
+</div>
+
+</div>
+</div>
+
+
+</form>
+
+
+
+</main>
+
+<script type="text/javascript">
+
+function changeAction(ans){
+
+    if( ans=='save-participant' ) {
+      document.getElementById('action_now_form').action = 'enter-info';
+    }
+    if( ans=='view-data' ) {
+      document.getElementById('action_now_form').action = 'dashboard';
+    }
+    if( ans=='guidance' ) {
+      document.getElementById('action_now_form').action = 'guidance-page';
+    }
+}
+
+
+</script>
+
+{% endblock %}
